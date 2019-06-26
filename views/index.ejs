@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test APP</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>View User</h1>
+
+    <ul class="users">
+        <% for(var i=0; i<userlist.length; i++) {%>
+            <li class="user">
+                <span><%= userlist[i].name %></span>
+                <span><%= userlist[i].role %></span>
+                <button id="delete"> Delete </button>
+                <span><%= userlist[i]._id %></span>
+            </li>
+            <% } %>
+    </ul>
+
+    <h2>Add an User</h2>
+
+    <form action="/add" method="POST">
+        <input type="text" placeholder="name" name="name">
+        <input type="text" placeholder="role" name="role">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>

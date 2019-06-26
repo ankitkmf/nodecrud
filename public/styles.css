@@ -1,0 +1,11 @@
+html {
+    font-size: 20px;
+}
+
+.user {
+    margin-top: 0.5em;
+}
+
+.user>span:last-child {
+    visibility: hidden
+}
